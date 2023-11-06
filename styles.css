@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+img {
+  height: 240px;
+  width: 300px;
+}
+
+nav h1 {
+  margin: 0;
+}
+
+.banner {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(to bottom right, #3498db, #9b59b6);
+  color: #fff;
+}
+
+.banner h2 {
+  margin-bottom: 10px;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #2ecc71, #3498db);
+}
+
+.project-card {
+  width: 380px;
+  height: 330px;
+  perspective: 800px;
+  position: relative;
+}
+
+.front, .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  transition: transform 0.8s, opacity 0.8s;
+}
+
+.front {
+  background-color: #3498db;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transform: rotateY(0deg);
+  color: white;
+}
+
+.back {
+  background-color: rgb(21, 180, 148);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  padding: 10px;
+  box-sizing: border-box;
+  opacity: 0;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  color: white;
+}
+
+.project-card:hover .front {
+  transform: rotateY(180deg);
+  opacity: 0;
+}
+
+.project-card:hover .back {
+  transform: rotateY(0deg);
+  opacity: 1;
+}
+
+h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+.contact {
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(to bottom right, #9b59b6, #e74c3c);
+  color: #fff;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.social-icons {
+  font-size: 24px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+}
+
+.social-icons a:hover {
+  color: #3498db;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
